@@ -29,10 +29,9 @@ pl.view.updateBook = {
           formEl.reset();
         }
     });
-    saveButton.addEventListener("click",
-        pl.view.updateBook.handleUpdateButtonClickEvent);
-    window.addEventListener("beforeunload", function () {
-        Book.saveAll();
+    saveButton.addEventListener("click", pl.view.updateBook.handleUpdateButtonClickEvent);
+       window.addEventListener("beforeunload", function () {
+         Book.saveAll();
     });
   },
   handleUpdateButtonClickEvent: function () {
